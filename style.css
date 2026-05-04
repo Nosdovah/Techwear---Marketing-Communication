@@ -455,10 +455,72 @@ a {
     opacity: 1;
 }
 
+/* -------------------------------------
+   RESPONSIVE DESIGN (MOBILE)
+-------------------------------------- */
 @media (max-width: 1024px) {
     .spread { grid-template-columns: 1fr; }
     .navbar { left: 5%; width: 90%; }
     .hero-section, #collections-container, .footer, .ticker-tape {
-        padding-left: 5%; padding-right: 5%; margin-left: 5%; margin-right: 5%;
+        padding-left: 5%; padding-right: 5%; margin-left: 2%; margin-right: 2%;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --nav-height: 100px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 0;
+        gap: 1rem;
+    }
+
+    .nav-center {
+        display: none; /* Hide desktop nav center on mobile */
+    }
+
+    .nav-right {
+        font-size: 0.7rem;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-desc {
+        font-size: 1rem;
+    }
+
+    .visual-placeholder {
+        min-height: 400px; /* Shorter on mobile */
+    }
+
+    .spread {
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .spread-visual {
+        padding: 1.5rem;
+    }
+
+    .fase-tag {
+        font-size: 0.7rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .ticker-tape {
+        font-size: 0.7rem;
     }
 }

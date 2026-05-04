@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             
             // Optional: We can insert a large divider for the phase
             const phaseHeader = document.createElement('div');
+            phaseHeader.id = `phase-${faseIndex + 1}`;
             phaseHeader.style.padding = '8rem 4rem 4rem 4rem';
             phaseHeader.style.borderBottom = '1px solid var(--border)';
             phaseHeader.innerHTML = `
