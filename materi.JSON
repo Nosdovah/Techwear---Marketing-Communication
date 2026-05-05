@@ -1,142 +1,189 @@
 {
-    "presentation_data": [
-        {
-            "fase": "FASE PERTAMA",
-            "slides": [
+    "dokumen": {
+        "judul": "Laporan Riset Pemasaran Komprehensif: Evaluasi Strategi Merek Techracer",
+        "pengantar": {
+            "sub_judul": "Pengantar: Transformasi Industri Fashion dan Paradigma Evolusi Pemasaran",
+            "paragraf": [
+                "• Industri fesyen global dan lokal saat ini tengah berada di episentrum transformasi yang didorong oleh pergeseran nilai konsumen, kemajuan teknologi digital, dan peningkatan kesadaran akan identitas personal serta keberlanjutan.",
+                "• Merek pakaian tidak lagi sekadar entitas komersial penutup tubuh; merek telah bermetamorfosis menjadi agregator nilai, gaya hidup, dan representasi citra diri yang ingin diproyeksikan konsumen.",
+                "• Techracer menempati sebuah ceruk pasar (niche market) yang sangat spesifik dan radikal, yaitu pakaian bergenre techwear dan cyberpunk sebuah hibrida antara busana fungsional tingkat tinggi dengan estetika jalanan (streetwear) bergaya distopia masa depan.",
+                "• Presentasi ini mengurai anatomi bisnis Techracer melalui empat fase kritis: Marketing 2.0 (Customer-Oriented), Marketing 3.0 (Human Centric), Marketing 4.0 (Moving to Digital), dan Taktik Kolaborasi Ekosistem Digital."
+            ]
+        },
+        "fase_1": {
+            "sub_judul": "Fase Pertama: Memilih Nilai Melalui Pendekatan Segmentasi, Targeting, dan Positioning (STP)",
+            "analisis_segmentasi_pasar": {
+                "sub_judul": "Analisis Segmentasi Pasar",
+                "tabel_1": {
+                    "data": [
+                        {
+                            "dimensi_segmentasi": "Karakteristik Geografis",
+                            "deskripsi_dan_analisis": "• Meskipun operasional berlokasi di Tangerang, batasan geografis pasar Techracer terhapus oleh e-commerce. Merek ini melayani pengiriman Worldwide (global), memecah segmentasi menjadi konsentrasi pasar domestik dan internasional (Asia, Jepang, Amerika Utara, hingga Eropa)."
+                        },
+                        {
+                            "dimensi_segmentasi": "Demografis",
+                            "deskripsi_dan_analisis": "• Membidik kohort Milenial dan Gen Z (15-35 tahun) dengan desain uniseks (gender-neutral). Target audiens berada pada segmen menengah hingga menengah-atas, dijustifikasi oleh titik harga produk utama berkisar antara $70.00 hingga $145.00 (Rp 495.000 hingga Rp 1.800.000)."
+                        },
+                        {
+                            "dimensi_segmentasi": "Psikografis",
+                            "deskripsi_dan_analisis": "• Dimensi psikografis adalah tulang punggung Techracer. Menargetkan individu dengan afinitas kultural mendalam terhadap subkultur cyberpunk, fiksi ilmiah, video game futuristik, dan estetika \"urban-dystopian\". Mereka membeli produk sebagai sarana eskapisme dan representasi identitas pemberontakan teknologi."
+                        },
+                        {
+                            "dimensi_segmentasi": "Perilaku (Behavioral)",
+                            "deskripsi_dan_analisis": "• Konsumen adalah adopter teknologi tinggi (tech-savvy) yang aktif di komunitas digital. Mereka mencari fungsionalitas ekstrem: pakaian tahan cuaca (waterproof/windproof), mobilitas tinggi, dan sistem penyimpanan ganda. Pola pembelian dipengaruhi efek ulasan sejawat dan visualisasi padu padan (OOTD) pemengaruh."
+                        }
+                    ]
+                }
+            },
+            "penargetan_pasar": {
+                "sub_judul": "Penargetan Pasar (Targeting): Analisis TAM, SAM, dan SOM",
+                "paragraf": [
+                    "• Total Addressable Market (TAM): Bermuara pada industri pakaian olahraga dan busana fungsional global. Di Indonesia saja, valuasinya mencapai USD 2.557,83 Juta pada 2024 dan tumbuh pesat. Secara global, TAM menyentuh angka ratusan miliar dolar.",
+                    "• Serviceable Available Market (SAM): Sub-sektor pakaian techwear dan streetwear taktis di pasar domestik maupun internasional. Konsumen secara eksplisit mencari integrasi bahan penolak air, sirkulasi udara, kapasitas penyimpanan masif, dan potensi gaya berlapis.",
+                    "• Serviceable Obtainable Market (SOM): Mencakup komunitas kolektor cyberpunk di Reddit (r/TechWear, r/kurowear), peminat fesyen motor gede yang mencari jaket windproof alternatif, serta pelanggan di agregator global seperti Etsy yang mencari estetika futuristik independen."
+                ]
+            },
+            "pemosisian_merek": {
+                "sub_judul": "Pemosisian Merek (Brand Positioning)",
+                "paragraf": [
+                    "• Techracer dengan brilian menolak diklasifikasikan sebagai pembuat \"baju\" konvensional. Mereka memperkenalkan produknya sebagai \"Futuristic Fashion Objects\" dan secara konsisten menyebut setiap potong pakaian sebagai \"Armor\" (Baju Zirah) atau \"Gears\" (Perlengkapan).",
+                    "• Diferensiasi diperkuat melalui sistem penamaan produk yang menyerupai kode klasifikasi militer atau nomenklatur sistem operasi (cth: HYPER/ ZERO.WHT, TRC99/ LP01.BLCK, CHASERS/ RED).",
+                    "• Pemosisian ini menciptakan batas eksklusivitas—sebuah bentuk validasi subkultur yang luar biasa kuat bagi penggemar sci-fi, menjustifikasi harga premium, dan menciptakan basis penganut kultus (cult following) yang loyal."
+                ]
+            }
+        },
+        "fase_2": {
+            "sub_judul": "Fase Kedua: Menyediakan Nilai Melalui Human Centric Marketing dan Bauran Pemasaran",
+            "analisis_proposisi_penjualan_unik": {
+                "sub_judul": "Analisis Proposisi Penjualan Unik (Unique Selling Point / USP)",
+                "tabel_2": {
+                    "data": [
+                        {
+                            "dimensi_usp": "Quality (Kualitas / Q)",
+                            "temuan_riset": "• Produk dikonstruksi dari material teknis poliester Taslan Milky dan kain Cordura (windproof & water-resistant), mengintegrasikan perangkat keras berspesifikasi tinggi seperti YKK Zipper dan Waterproof Webbing. Sebagai respons atas kritik pelanggan terkait sablon DTF yang rentan, Techracer melakukan peningkatan dengan mengonversi metode cetak menjadi Manual Screen Printing mulai Maret 2026 untuk menjamin durabilitas estetika."
+                        },
+                        {
+                            "dimensi_usp": "Service Excellence (Layanan Unggul / Se)",
+                            "temuan_riset": "• Layanan pelanggan via surel dan WhatsApp. Kebijakan pengembalian ketat, menolak penukaran jika produk telah dicuci/digunakan. Terdapat krisis manajemen komplain dari pembeli internasional yang tidak menerima konfirmasi pembaruan pengiriman. Namun, sebagian konsumen merasa puas dengan respon surel. Dimensi ini masih menjadi titik kelemahan yang harus distabilkan."
+                        },
+                        {
+                            "dimensi_usp": "Price (Harga / P)",
+                            "temuan_riset": "• Beroperasi di koridor premium terjangkau (affordable premium). Harga internasional antara $110.00 hingga $145.00, domestik Rp 495.000 hingga Rp 1.800.000. Menggunakan Value-Based Pricing, di mana konsumen membayar untuk desain futuristik dan eksklusivitas. Sangat kompetitif dibandingkan pelopor techwear raksasa seperti Acronym."
+                        },
+                        {
+                            "dimensi_usp": "Speed (Kecepatan / S)",
+                            "temuan_riset": "• Paket diproses 3-7 hari kerja. Pengiriman domestik lancar. Pengiriman lintas benua bervariasi: Amerika relatif cepat, namun Eropa bisa 2-3 minggu. Notifikasi pajak cukai via WhatsApp lokal sering terlewatkan pelanggan internasional. Techracer merestrukturisasi layanan dengan beralih sepenuhnya ke DHL untuk menjamin akurasi dan kecepatan lacak."
+                        }
+                    ]
+                }
+            },
+            "analisis_bauran_pemasaran": {
+                "sub_judul": "Analisis Bauran Pemasaran (Marketing Mix 7P)",
+                "poin_7p": [
+                    "1. Product: Manifestasi fisik perlengkapan pertahanan sci-fi. Meliputi UPPER.ARMOR (Jaket NIGHTSHADE, STRIKER), LOWER.ARMOR (Celana kargo TRC99/ LP01 dengan 7 saku), Carrier, Basic Apparel, dan aksesori. Fitur mencakup removable hoodie, swift mode system ritsleting, dan jaring plastik.",
+                    "2. Price: Tas utilitas mulai $70.00, heavy-class jackets hingga $145.00. Menggunakan taktik promosi berkala seperti Payday Sale (potongan hingga 50%) dan \"Beli 5 Gratis 1\" untuk merangsang perilaku pembelian impulsif.",
+                    "3. Place: Model Bisnis Langsung ke Konsumen (D2C) murni berbasis e-commerce. Portal internasional (techracer.id), domestik (techracer.shop), serta agregator Tokopedia, Shopee, dan Etsy untuk merengkuh segmen spesifik.",
+                    "4. Promotion: Penceritaan visual asimetris. Penguasaan algoritma Instagram melalui konten buatan pengguna (UGC), desain glitch-art, dan penggelaran acara \"New Drop\" eksklusif yang menciptakan efek kelangkaan dan urgensi.",
+                    "5. People: Melibatkan ekosistem manusia yang membentuk otoritas kultural merek: administrator CS, fotografer komunitas, pemengaruh gaya jalanan, model fesyen nir-gender, dan penggemar setia.",
+                    "6. Process: Alur transaksi disistematisasi layaknya instalasi piranti lunak. Namun, pelanggan internasional diwajibkan menyediakan Nomor Induk Pajak (Tax ID) saat checkout untuk kliring pabean, dan PO BOX dilarang.",
+                    "7. Physical Evidence: UI situs web menyajikan pengalaman imersif (animasi sci-fi, instruksi \".EXECUTE\"). Bukti fisik nyata hadir lewat kekakuan webbing nilon, label logo silikon, ritsleting YKK, dan presisi jahitan."
+                ]
+            }
+        },
+        "fase_3": {
+            "sub_judul": "Fase Ketiga: Mengkomunikasikan Nilai dalam Era Pemasaran Digital",
+            "promosi_unik": {
+                "sub_judul": "Promosi Unik: Estetika Pembaruan Sistem",
+                "poin": [
+                    "• Strategi paling unik Techracer adalah mengubah pengumuman koleksi (Product Drop) menjadi simulasi peluncuran pembaruan piranti lunak dan instalasi perangkat keras (Software/Hardware System Update).",
+                    "• Mereka membuang terminologi ritel tradisional. Alih-alih tombol \"Beli Sekarang\", mereka menggunakan komando siber seperti \".EXECUTE\", \".INPUT\", dan \"INSTALL ARMOR\".",
+                    "• Rilis jaket heavy-class dipresentasikan sebagai \"New Drop\" sistem pertahanan masa depan dengan nama sandi militer seperti .TYP/A.R.S/BLK."
+                ]
+            },
+            "jenis_mix": {
+                "sub_judul": "Klasifikasi Bauran Promosi (Promotion Mix)",
+                "poin": [
+                    "• Tergolong perpaduan Digital Marketing terspesialisasi dan turunan Direct Marketing, dibumbui Guerilla Marketing secara visual.",
+                    "• Seluruh siklus eksekusi dilangsungkan dalam ekosistem siber (Web & Instagram).",
+                    "• Pemanfaatan rekayasa visual glitch-art, warna kontras, dan manipulasi tata bahasa komputasi (penyisipan //) dirancang untuk beresonansi dengan algoritma kelompok geek, gamer, dan penganut kebudayaan siber."
+                ]
+            },
+            "alasan_menarik": {
+                "sub_judul": "Mengapa Strategi Ini Menarik dan Efektif",
+                "poin": [
+                    "• Strategi \"sistem pembaruan\" ini berhasil menembus kebisingan iklan ritel konvensional. Bagi target market, bahasa sandi ini adalah validasi identitas dan pemenuhan fantasi psikografis.",
+                    "• Pendekatan gamifikasi transaksi mengunci loyalitas secara organik. Konsumen merasa sedang berpartisipasi dalam permainan peran (role-playing) pasca-apokaliptik.",
+                    "• Kepuasan emosional memicu \"cheerleaders effect\", di mana pelanggan dengan sukarela membagikan bukti transaksi ke media sosial, bertransformasi menjadi materi promosi gratis (earned media)."
+                ]
+            }
+        },
+        "fase_4": {
+            "sub_judul": "Fase Keempat: Taktik Kolaborasi Ekosistem (Type of Collaborator)",
+            "taktik": [
                 {
-                    "judul_slide": "Slide 1: Segmentasi Geografis & Demografis",
-                    "konten": [
-                        "1. Segmentasi Geografis Fokus pada wilayah dengan karakteristik tertentu yang mendukung penggunaan pakaian multifungsi:",
-                        "Wilayah: Area metropolitan dan kota-kota besar (seperti Jakarta, Bandung, Surabaya) yang memiliki tingkat mobilitas tinggi.",
-                        "Kondisi Lingkungan: Daerah urban dengan cuaca yang dinamis (sering hujan atau panas terik), sehingga membutuhkan pakaian dengan material tahan cuaca (water-resistant atau breathable).",
-                        "2. Segmentasi Demografis Menyasar kelompok populasi dengan profil berikut:",
-                        "Umur: Gen Z dan Millennial, rentang usia 18 – 35 tahun.",
-                        "Jenis Kelamin: Mayoritas laki-laki, namun semakin meluas ke pasar unisex dan androgini.",
-                        "Pendapatan: Menengah ke atas (Middle to High), karena material techwear (seperti Gore-Tex atau resleting kedap air) biasanya membuat harga produk lebih premium.",
-                        "Pekerjaan: Pelajar, pekerja kreatif, freelancer, pekerja IT, dan komuter urban."
+                    "judul": "A. Konten Pemblokiran (Blocking Content)",
+                    "teks": [
+                        "• Metodologi pemasaran di mana merek memonopoli seluruh ruang linimasa promosi digital mereka (secara berulang dan masif) untuk satu tema peluncuran.",
+                        "• Bukti: Saat peluncuran seri \".CHASERS\" dan \"NEO/X5\", Techracer mengambil alih struktur grid Instagram utama mereka (@techracer.id). Mereka mempublikasikan pos beruntun yang merilis kode nama (PROWLER, BUSTER, dll) dan fitur teknis secara sekuensial.",
+                        "• Dampak: Pemblokiran ini menciptakan ilusi skala acara yang masif (hype), mengondisikan audiens bahwa peluncuran ini adalah momentum historis yang tidak boleh dilewatkan."
                     ]
                 },
                 {
-                    "judul_slide": "Slide 2: Segmentasi Psikografis & Perilaku",
-                    "konten": [
-                        "3. Segmentasi Psikologis (Psikografis) Menggali gaya hidup dan karakteristik personal audiens:",
-                        "Gaya Hidup (AIO - Activities, Interests, Opinions): Aktif, menyukai eksplorasi urban, memiliki ketertarikan tinggi pada streetwear, sneakers, teknologi, budaya pop-kultur (seperti cyberpunk atau anime), dan esports.",
-                        "Karakteristik Personal: Mengutamakan utilitas (fungsi) tanpa mengorbankan estetika, forward-thinking, dan cenderung memiliki preferensi visual yang edgy, gelap, atau minimalis.",
-                        "4. Segmentasi Perilaku Fokus pada consumption behavior atau bagaimana mereka berinteraksi dengan produk:",
-                        "Perilaku Pembelian: Mengutamakan kualitas dibandingkan kuantitas (investment pieces). Mereka rela membayar lebih mahal untuk spesifikasi teknis yang jelas (misalnya jumlah saku yang taktis, bahan anti-air, modularitas).",
-                        "Loyalitas & Interaksi: Sangat aktif di komunitas digital, cenderung mengoleksi produk, dan loyal terhadap brand yang konsisten mempertahankan identitas desain inovatifnya."
+                    "judul": "B. Konten Terintegrasi dan Edukasi (Built-in Content / Product Knowledge)",
+                    "teks": [
+                        "• Promosi edukatif di mana penjelasan komprehensif anatomi produk disisipkan langsung ke materi konten utama untuk mendongkrak product knowledge dan merasionalkan harga premium.",
+                        "• Bukti: Pada unggahan Messenger Carrier, Techracer secara eksplisit memaparkan penggunaan \"Cordura water-repellent\", cetakan \"premium DTF\", dan emblem logo silikon densitas tinggi.",
+                        "• Bukti: Saat rilis Jaket NIGHTSHADE, mereka mendemonstrasikan cara kerja sistem \"Swift mode\" (adaptasi dua ritsleting belakang) dan material furing di kompartemen dalam."
                     ]
                 },
                 {
-                    "judul_slide": "Slide 3: Target Pasar (Targeting)",
-                    "konten": [
-                        "Definisi Target Pasar Utama: Berdasarkan analisis segmentasi di atas, target pasar potensial untuk brand Techwear ini adalah \"Milenial dan Gen Z di kawasan urban yang memiliki mobilitas tinggi, memiliki daya beli menengah ke atas, serta memprioritaskan pakaian dengan fungsionalitas teknis tinggi sekaligus estetika streetwear futuristik untuk mendukung gaya hidup harian mereka.\"",
-                        "Target ini sangat relevan dengan pergeseran pemahaman terhadap kebutuhan pelanggan, di mana mereka mencari solusi praktis (fungsi techwear) yang sejalan dengan ekspresi identitas diri mereka di lingkungan sosial."
+                    "judul": "C. Penempatan dan Penggunaan Produk (Product Placement & Usage)",
+                    "teks": [
+                        "1. UGC & Influencer OOTD: Techracer memanen kredibilitas jalanan dengan me-repost foto kreator digital/pelanggan yang berpose OOTD bergaya cyberpunk di lanskap urban, membuktikan produk mampu mendorong kreativitas pemakai.",
+                        "2. Komunitas Hobi Ekstrem: Melakukan ekspansi penempatan implisit ke kebudayaan otomotif dengan menyematkan tagar #motorcyclefashion, memvalidasi utilitas windbreaker bagi pengendara roda dua di lingkungan berisiko tinggi.",
+                        "3. Cross-Brand Product Placement: Berkolaborasi dengan produsen tekstil @drip_wears untuk menyematkan grafis khas Techracer, memperluas paparan logo. Keabsahan merek juga divalidasi lewat ulasan independen dari saluran YouTube fesyen."
                     ]
                 }
             ]
         },
-        {
-            "fase": "FASE KEDUA",
-            "slides": [
-                {
-                    "judul_slide": "Slide 1: Unique Selling Point (USP) Analysis",
-                    "konten": [
-                        "Sesuai dengan elemen penciptaan nilai, berikut adalah analisis USP untuk brand Techwear:",
-                        "Quality (Kualitas - Q): Menggunakan material berteknologi tinggi seperti bahan water-resistant (tahan air), windproof (tahan angin), dan breathable. Produk dirancang dengan utilitas tinggi, seperti desain modular dan saku taktis multifungsi.",
-                        "Service Excellence (Layanan Prima - Se): Memberikan layanan purna jual premium, seperti garansi seumur hidup untuk kerusakan resleting kedap air atau jahitan, serta konsultasi sizing (ukuran) yang presisi secara online.",
-                        "Price (Harga - P): Menggunakan strategi harga premium (premium pricing). Harga diposisikan bukan sebagai pengeluaran konsumtif, melainkan sebagai investment piece (barang investasi) karena durabilitas produk yang sangat panjang.",
-                        "Speed (Kecepatan - S): Kecepatan dalam inovasi fitur teknis pada pakaian dan sistem pre-order atau pengiriman yang terintegrasi secara cepat dan transparan kepada konsumen."
-                    ]
-                },
-                {
-                    "judul_slide": "Slide 2: Marketing 3.0 (Human Centric & Persepsi Konsumen)",
-                    "konten": [
-                        "Fase ini menjawab nilai emosional dan isu sosial yang dibawa oleh brand sesuai era Marketing 3.0:",
-                        "\"Ingin dipersepsikan sebagai siapa?\": Konsumen techwear ingin dipersepsikan sebagai individu yang forward-thinking (berpikiran maju), tech-savvy, bergaya edgy (urban ninja), dan selalu siap sedia (prepared) menghadapi kerasnya mobilitas dan cuaca perkotaan. Produk ini memenuhi Tertiary Function berupa kebanggaan dan gengsi.",
-                        "Nilai dan Isu yang Diwakili (Sustainability/Etika): Mengusung konsep Slow Fashion. Dengan menciptakan produk yang sangat awet (durabilitas tinggi) dan fungsional, brand mengedukasi konsumen untuk \"membeli lebih sedikit, namun berkualitas\", sehingga mengurangi limbah fast fashion yang merusak lingkungan."
-                    ]
-                },
-                {
-                    "judul_slide": "Slide 3: Bauran Pemasaran (7P Marketing Mix)",
-                    "konten": [
-                        "Analisis taktis operasional brand Techwear melalui pendekatan 7P:",
-                        "Product: Jaket shell, celana kargo modular, dan tas utilitas dengan estetika siber-futuristik.",
-                        "Price: Value-based pricing, di mana harga tinggi dijustifikasi oleh riset material dan teknologi performa pada pakaian.",
-                        "Place: Strategi Omnichannel; penjualan utama melalui website Direct-to-Consumer (DTC) untuk pengalaman digital maksimal, didukung oleh pop-up store eksklusif dengan desain interior industrial.",
-                        "Promotion: Pemasaran digital agresif menggunakan visual cyberpunk, kolaborasi dengan influencer streetwear, dan kampanye video konseptual di media sosial.",
-                        "People: Tim customer support dan staf toko yang tidak hanya paham sales, tetapi memiliki product knowledge mendalam tentang spesifikasi teknis kain dan teknologi garmen.",
-                        "Process: Proses pemesanan digital yang seamless (mulus) dengan fitur tracking logistik yang real-time.",
-                        "Physical Evidence: Kemasan produk (packaging) menggunakan material matte black berbahan daur ulang, desain antarmuka (UI) website yang terlihat seperti sistem operasi masa depan, dan tag baju yang memuat detail spesifikasi teknis layaknya perangkat gawai."
-                    ]
-                }
+        "kesimpulan_strategis": {
+            "sub_judul": "Kesimpulan Strategis",
+            "paragraf": [
+                "• Techracer sukses membedah industri busana olahraga fungsional Indonesia dengan memonopoli Serviceable Obtainable Market (SOM) penggemar cyberpunk.",
+                "• Pemosisian sebagai \"Armor\" dan kualitas berspesifikasi komando memperkuat USP mereka di era Marketing 3.0, meskipun tantangan logistik internasional dan manajemen komplain masih perlu perbaikan.",
+                "• Eksekusi Marketing 4.0 yang revolusioner—via antarmuka \"Pembaruan Perangkat Keras\", Blocking Content, dan orkestrasi UGC—membuat transaksi menjadi pengalaman naratif imersif yang memicu advokasi loyalitas seumur hidup."
             ]
         },
-        {
-            "fase": "FASE KETIGA",
-            "slides": [
-                {
-                    "judul_slide": "Slide 1: Strategi Komunikasi Era Marketing 4.0",
-                    "konten": [
-                        "Pendekatan Interaksi O2O (Online-to-Offline): Brand Techwear tidak hanya berjualan, tetapi membangun komunitas digital (seperti grup Discord atau forum streetwear). Mereka menyatukan pengalaman digital dan fisik, misalnya merilis produk secara online namun memberikan petunjuk (clues) lokasi fisik untuk mendapatkan diskon eksklusif.",
-                        "Penggiringan Opini & Cheerleaders Effect: Brand memanfaatkan loyalitas komunitasnya. Saat ada peluncuran (drop) produk baru, komunitas inilah yang akan secara sukarela menjadi \"pemandu sorak\" (cheerleaders) yang memviralkan produk tersebut di media sosial melalui diskusi spesifikasi teknis tas atau jaket yang baru dirilis."
-                    ]
-                },
-                {
-                    "judul_slide": "Slide 2: Contoh Promosi Unik (Visual/Link Drop)",
-                    "konten": [
-                        "(Catatan untuk presentasi: Di slide ini, kamu harus memasukkan gambar/screenshot kampanye atau meletakkan link video dari brand techwear yang kamu pilih. Berikut adalah narasi deskripsinya.)",
-                        "Nama Kampanye: \"The Secret Urban Drop\" / \"Cyber-Hunt\"",
-                        "Deskripsi Promosi: Brand Techwear merilis koordinat misterius atau kode QR yang disembunyikan di beberapa titik strategis perkotaan (misalnya di stasiun MRT atau tembok area industrial). Konsumen harus memecahkan teka-teki (puzzle) di Instagram Story brand untuk menemukan lokasi tersebut. Jika berhasil menemukan dan men-scan QR code di lokasi fisik, mereka akan mendapatkan akses tautan rahasia (secret link) di website untuk membeli jaket edisi terbatas (limited edition) yang tidak dijual untuk publik umum.",
-                        "Bukti: (Masukkan gambar poster kampanye hitam/neon yang berisi koordinat rahasia atau screenshot Instagram Story brand yang menggunakan efek glitch/hacker)."
-                    ]
-                },
-                {
-                    "judul_slide": "Slide 3: Analisis Jenis Promosi (Promotion Mix)",
-                    "konten": [
-                        "Sesuai instruksi soal, berikut adalah analisis dari kampanye unik di atas:",
-                        "Jenis Promotion Mix: Kampanye ini merupakan gabungan dari Guerilla Marketing (karena mengejutkan, tidak konvensional, dan dilakukan di ruang publik fisik) serta Digital Marketing (menggunakan media sosial dan website rahasia). Kampanye ini juga mengandung elemen Sales Promotion karena memberikan akses pembelian khusus bagi yang berhasil.",
-                        "Mengapa Promosi Ini Menarik?",
-                        "Menciptakan FOMO (Fear Of Missing Out): Produk edisi terbatas yang dikunci di balik sebuah teka-teki digital membuat audiens merasa tertantang dan sangat eksklusif jika berhasil mendapatkannya.",
-                        "Sesuai dengan Persona Brand: Promosi ala peretas (hacker/cyber) ini sangat selaras dengan identitas Techwear yang lekat dengan fiksi ilmiah dan teknologi masa depan.",
-                        "Memicu User Generated Content (UGC): Konsumen yang sedang berburu kode QR di jalanan kota akan merekam aksi mereka dan mengunggahnya ke media sosial. Ini memicu cheerleaders effect, di mana interaksi online dan offline (O2O) benar-benar terjadi secara masif dan organik."
-                    ]
-                }
-            ]
-        },
-        {
-            "fase": "FASE KEEMPAT",
-            "slides": [
-                {
-                    "judul_slide": "Slide 1: Kolaborasi Tingkat 1 - Blocking Content",
-                    "konten": [
-                        "Definisi Konsep: Promosi ini merupakan konten yang sepenuhnya dikhususkan untuk satu merek selama sebuah acara berlangsung, di mana sifatnya monopoli, berulang, dan membutuhkan biaya yang jauh lebih mahal.",
-                        "Analisis Penerapan pada Techwear: Brand Techwear menjadi sponsor utama dan satu-satunya (eksklusif) dalam sebuah turnamen E-Sports tingkat nasional atau festival musik elektronik/ synthwave. Selama siaran langsung (live streaming) berjam-jam, logo brand, video bumper, dan grafis promosi secara konstan menguasai layar transisi, dan caster (komentator) hanya menggunakan jaket dari brand tersebut.",
-                        "Bukti Visual:",
-                        "(Masukkan Screenshot/Link YouTube dari siaran turnamen E-Sports atau event musik di mana logo/video promosi brand Techwear tersebut mendominasi layar secara eksklusif)."
-                    ]
-                },
-                {
-                    "judul_slide": "Slide 2: Kolaborasi Tingkat 2 - Built-in Content / Product Knowledge",
-                    "konten": [
-                        "Definisi Konsep: Promosi disisipkan secara langsung (eksplisit) di dalam konten utama, biasanya melalui penjelasan spesifik dari influencer, host, atau content creator yang sedang viral.",
-                        "Analisis Penerapan pada Techwear: Mengingat techwear memiliki spesifikasi teknis yang kompleks, brand berkolaborasi dengan reviewer fesyen streetwear atau reviewer gawai (teknologi). Dalam videonya, influencer tersebut secara eksplisit mendemonstrasikan fitur produk, seperti menyiramkan air ke jaket untuk menguji material water-repellent, membongkar pasang saku modular, dan menjelaskan sirkulasi udara (breathability) pada kain.",
-                        "Bukti Visual:",
-                        "(Masukkan potongan video atau link Reels/TikTok/YouTube dari influencer yang sedang secara aktif mereview spesifikasi jaket/tas techwear tersebut sambil menyebutkan nama brand-nya)."
-                    ]
-                },
-                {
-                    "judul_slide": "Slide 3: Kolaborasi Tingkat 3 - Product Placement & Usage",
-                    "konten": [
-                        "Definisi Konsep: Promosi dilakukan secara implisit (tidak langsung), di mana produk hanya ditampilkan atau digunakan dalam sebuah konten tanpa adanya penjelasan secara eksplisit.",
-                        "Analisis Penerapan pada Techwear:",
-                        "Product Placement: Produk hanya ditampilkan secara visual tanpa dibahas. Contoh: Seorang Disc Jockey (DJ) atau model cyberpunk memposting foto Outfit of The Day (OOTD) di Instagram berlatar lampu neon kota. Ia menggunakan jaket dan celana kargo dari brand Techwear tersebut dengan sangat jelas, namun di caption ia tidak membahas atau menyebutkan nama produknya sama sekali.",
-                        "Product Usage: Produk tidak sekadar tampil, tetapi juga digunakan secara aktif dalam konteks fungsinya. Contoh: Sebuah video pendek dari atlet parkour atau penari hip-hop yang sedang beraksi melompat di tengah hujan perkotaan. Mereka secara aktif bergerak menggunakan celana taktis dan jaket techwear tersebut, menunjukkan kelenturan dan fungsi anti-airnya secara nyata tanpa mengucapkan sepatah kata pun tentang produk itu.",
-                        "Bukti Visual:",
-                        "(Masukkan Screenshot foto OOTD Instagram influencer untuk contoh Placement, dan potongan klip video parkour/dance untuk contoh Usage)."
-                    ]
-                }
+        "works_cited": {
+            "sub_judul": "Works cited",
+            "daftar": [
+                "1. ETS Marketing Communication.pdf",
+                "2. Contact - TECHRACER, accessed May 5, 2026, https://techracer.id/contact/",
+                "3. TECHRACER | Cyberpunk Techwear Fashion, accessed May 5, 2026, https://techracer.id/",
+                "4. Do not buy HOLYGRAIL r/kurowear Reddit, accessed May 5, 2026, https://www.reddit.com/r/kurowear/comments/1al6186/do_not_buy_holygrail/",
+                "5. Techracer.id experiences/shipping times?: r/kurowear - Reddit, accessed May 5, 2026, https://www.reddit.com/r/kurowear/comments/1okbhej/techracerid_experiencesshipping_times/",
+                "6. TERMS & CONDITIONS TECHRACER, accessed May 5, 2026, https://techracer.id/termsconditions/",
+                "7. Indonesia Sportswear Market Size and Growth Report 2033 IMARC Group, accessed May 5, 2026, https://www.imarcgroup.com/indonesia-sportswear-market",
+                "8. Techwear Cyberpunk Jacket: Waterproof Windproof Tactical Coat Etsy, accessed May 5, 2026, https://www.etsy.com/listing/1887986054/techwear-cyberpunk-jacket-waterproof",
+                "9. Jual Techracer Murah Harga Terbaru Mei 2026 Tokopedia, accessed May 5, 2026, $=0$ rganic&utm_campaign=find",
+                "10. TECHRACER (@techracer.id) Instagram photos and videos, accessed May 5, 2026, https://www.instagram.com/techracer.id/",
+                "11. HYPER/ ZERO.WHITE techracer, accessed May 5, 2026, https://techracer.id/product/hyper-zero-white/",
+                "12. BREAKER/ WHITE TECHRACER, accessed May 5, 2026, https://techracer.id/product/breaker-white/",
+                "13. NIGHTSHADE/ WHITE | TECHRACER, accessed May 5, 2026, https://techracer.id/product/nightshade-white/",
+                "14. outfits techwear Tik Tok Shop, accessed May 5, 2026, https://shop.tiktok.com/us/k/outfits-techwear",
+                "15. Market Sizing with TAM SAM SOM (with calculator) | Seer Interactive, accessed May 5, 2026, https://www.seerinteractive.com/insights/marketing-sizing-with-tam-sam-som",
+                "16. Indonesia Apparel Market, Industry Analysis and Future Forecast to 2030 - Ken Research, accessed May 5, 2026, https://www.kenresearch.com/industry-reports/indonesia-apparel-market",
+                "17. Techracer.id Stay away from it: r/TechWear Reddit, accessed May 5, 2026, https://www.reddit.com/r/TechWear/comments/1gjhnsz/techracerid_stay_away_from it/",
+                "18. JACKET TECHRACER, accessed May 5, 2026, https://techracer.id/product-category/jacket/page/2/",
+                "19. STRIKER/ MERC techracer, accessed May 5, 2026, https://techracer.id/product/striker-merc/",
+                "20. PANTS techracer, accessed May 5, 2026, https://techracer.id/product-category/pants/",
+                "21. Analysis of the 7P Marketing Mix and Strategic Recommendations Using an Omnichannel Approach: A Descriptive Study of Cooler City e-Journal UIN Suska, accessed May 5, 2026, https://ejournal.uin-suska.ac.id/index.php/jti/article/download/32944/12059",
+                "22. Analysis of the Effect of Marketing Mix 7P on Purchase Decisions at Sentra Snack Stores Universitas Ciputra e-Journal, accessed May 5, 2026, https://journal.uc.ac.id/index.php/RMBE/article/download/2421/1751/5805",
+                "23. strategic marketing approaches leveraging the 7p marketing mix framework to overcome ome sales challenges Digilib ITB, accessed May 5, 2026, https://digilib.itb.ac.id/assets/files/2025/MjAyNV9UU19QUF9pbG1hbiBTYWRyaSOyOTEyMzA4MV9GdWxsIFRIeHQucGRm1.pdf",
+                "24. JACKET TECHRACER, accessed May 5, 2026, https://techracer.id/product-category/jacket/",
+                "25. Techwear Cargo Pants: Men's Tactical Jogger Trousers With Pockets - Etsy UK, accessed May 5, 2026, https://www.etsy.com/uk/listing/1879252000/techwear-cargo-pants-mens-tactical",
+                "26. 3 Local Brands with a Techwear Theme | #localcreate #eps2 - YouTube, accessed May 5, 2026, https://www.youtube.com/watch?v=fJJy69HNΝΙ8"
             ]
         }
-    ]
+    }
 }

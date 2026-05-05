@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const container = document.getElementById('collections-container');
 
-    // Smooth reveal animation on scroll
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -17,193 +16,215 @@ document.addEventListener('DOMContentLoaded', async () => {
         const response = await fetch('materi.JSON');
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const data = await response.json();
-        
-        container.innerHTML = ''; // Clear loading text
-        
-        // Build the Lookbook spreads
-        buildLookbook(data.presentation_data);
+
+        container.innerHTML = '';
+
+        buildPresentation(data.dokumen);
 
     } catch (error) {
         console.error("Error loading presentation data:", error);
         container.innerHTML = `
-            <div style="padding: 5rem 4rem; text-align: center; font-family: 'Syncopate', sans-serif;">
-                <h2 style="color: #ff3366; margin-bottom: 1rem;">DATA RETRIEVAL FAILED</h2>
-                <p style="font-family: 'Inter', sans-serif; color: var(--text-muted);">${error.message}</p>
-                <p style="font-family: 'Inter', sans-serif; color: var(--text-muted); margin-top: 1rem;">Please ensure you are viewing this via a local server.</p>
+            <div style="padding: 5rem 4rem; text-align: center; font-family: 'Inter', sans-serif;">
+                <h2 style="color: var(--accent-secondary); margin-bottom: 1rem;">DATA RETRIEVAL FAILED</h2>
+                <p style="color: var(--text-muted);">${error.message}</p>
+                <p style="color: var(--text-muted); margin-top: 1rem;">Please ensure you are viewing this via a local server.</p>
             </div>
         `;
     }
 
-    function buildLookbook(presentationData) {
-        let slideCounter = 1;
+    function cleanText(text) {
+        if (!text) return '';
+        let cleaned = text.replace(/\[source:\s*\d+\]/g, '');
+        // Remove superscripts
+        cleaned = cleaned.replace(/[¹²³⁴⁵⁶⁷⁸⁹⁰]/g, '');
+        return cleaned;
+    }
 
-        presentationData.forEach((faseData, faseIndex) => {
-            
-            // Optional: We can insert a large divider for the phase
-            const phaseHeader = document.createElement('div');
-            phaseHeader.id = `phase-${faseIndex + 1}`;
-            phaseHeader.style.padding = '8rem 4rem 4rem 4rem';
-            phaseHeader.style.borderBottom = '1px solid var(--border)';
-            phaseHeader.innerHTML = `
-                <div class="fase-tag" style="margin-bottom: 1rem;">COLLECTION 0${faseIndex + 1}</div>
-                <h2 style="font-family: 'Syncopate', sans-serif; font-size: clamp(2rem, 4vw, 4rem);">${faseData.fase}</h2>
-            `;
-            container.appendChild(phaseHeader);
-
-            // Iterate slides as spreads
-            faseData.slides.forEach((slideData) => {
-                const highlightText = (text) => {
-                    // Highlight starting context (e.g. "Wilayah:", "Umur:")
-                    const startingContextPattern = /^([^:]+):/;
-                    let highlightedText = text.replace(startingContextPattern, (match, p1) => {
-                        return `<span class="context-label">${p1}:</span>`;
-                    });
-
-                    const keywords = /(Techwear|Marketing \d\.\d|Segmentasi|Geografis|Demografis|Psikografis|Perilaku|Targeting|Gore-Tex|water-resistant|windproof|breathable|streetwear|cyberpunk|Unique Selling Point|USP|O2O|Omnichannel|Direct-to-Consumer|DTC|FOMO|Slow Fashion|premium pricing|investment piece|Guerilla Marketing|Sales Promotion|Cheerleaders Effect|Blocking Content|Built-in Content|Product Placement|Product Usage)/gi;
-                    return highlightedText.replace(keywords, match => `<span style="color: var(--neon-cyan); font-weight: 600; text-shadow: 0 0 8px rgba(0, 243, 255, 0.4);">${match}</span>`);
-                };
-
-                const spread = document.createElement('div');
-                spread.className = 'spread';
-
-                let contentHtml = '';
-                slideData.konten.forEach(item => {
-                    // Check if item is a header/definition
-                    let isHeader = item.match(/^[0-9]\./) || 
-                                   item.includes("Definisi Konsep:") || 
-                                   item.includes("Analisis Penerapan pada Techwear:") ||
-                                   item.includes("Jenis Promotion Mix:") ||
-                                   item.match(/^[A-Za-z]+\s*\([^)]+\):/);
-                    
-                    let isImagePlaceholder = item.startsWith("Bukti Visual:") || item.startsWith("(Masukkan") || item.startsWith("(Catatan");
-
-                    if (isImagePlaceholder) {
-                        contentHtml += `
-                            <div class="content-item">
-                                <div style="padding: 2rem; border: 1px dashed var(--border); color: var(--text-muted); font-size: 0.85rem; font-style: italic;">
-                                    ${item}
-                                </div>
-                            </div>
-                        `;
-                    } else if (isHeader) {
-                        let parts = item.split(':');
-                        if(parts.length > 1 && !item.match(/^[0-9]\./)) {
-                            contentHtml += `
-                                <div class="content-item">
-                                    <h4>${parts[0]}:</h4>
-                                    <p>${highlightText(parts.slice(1).join(':'))}</p>
-                                </div>
-                            `;
-                        } else {
-                            contentHtml += `
-                                <div class="content-item">
-                                    <h4>${item}</h4>
-                                </div>
-                            `;
-                        }
-                    } else {
-                        contentHtml += `
-                            <div class="content-item">
-                                <p>${highlightText(item)}</p>
-                            </div>
-                        `;
-                    }
-                });
-
-                // Get abstract identifier for image side
-                let identifier = slideData.judul_slide.split(':')[0] || `ITEM 0${slideCounter}`;
-                let title = slideData.judul_slide.split(':').slice(1).join(':').trim() || slideData.judul_slide;
-
-                let visualContent = `
-                        <div class="visual-placeholder data-mono">
-                            [ VISUAL ASSET PLACEHOLDER ]
-                        </div>
-                `;
-
-                // Visual Asset Mapping Logic
-                let currentFase = faseData.fase.toUpperCase();
-                let slideTitle = slideData.judul_slide;
-
-                if (currentFase.includes("PERTAMA")) {
-                    let images = [];
-                    if (slideTitle.includes('Slide 1')) {
-                        images = ['nyxchange_model_1.jpg', 'nyxchange_model_2.jpg', 'androgynous-techwear-1.jpg'];
-                    } else if (slideTitle.includes('Slide 2')) {
-                        images = ['techwear-rain-jacket-2.jpg', 'techwear-rain-jacket-3.jpg', 'techweartstorm-techwear-jacket-1.jpeg'];
-                    } else if (slideTitle.includes('Slide 3')) {
-                        images = ['nyxchange_model_3.jpg', 'nyxchange_model_4.jpg', 'androgynous-techwear-2.jpg'];
-                    }
-
-                    if (images.length > 0) {
-                        visualContent = `
-                            <div class="visual-placeholder data-mono" style="padding:0; border: 1px solid var(--neutral-gunmetal); background: transparent;">
-                                <div class="slideshow-container">
-                                    ${images.map((img, i) => `<img src="images/Techwear/FirstPhase/${img}" class="slide-img ${i === 0 ? 'active' : ''}">`).join('')}
-                                </div>
-                            </div>
-                        `;
-                    }
-                } else if (currentFase.includes("KEDUA")) {
-                    let images = [];
-                    if (slideTitle.includes('Slide 1')) {
-                        images = ['black-workwear-jacket_2.jpg', 'black-workwear-jacket_3.jpg', 'black-workwear-jacket_4.jpg', 'black-workwear-jacket_5.jpg'];
-                    } else if (slideTitle.includes('Slide 2')) {
-                        images = ['Gemini_Generated_Image_8kuvmv8kuvmv8kuv.png', 'Gemini_Generated_Image_g0i4wlg0i4wlg0i4.png'];
-                    } else if (slideTitle.includes('Slide 3')) {
-                        // Special case: Single HD image for 7P Visualization
-                        visualContent = `
-                            <div class="visual-placeholder data-mono" style="padding:0; border: 1px solid var(--neutral-gunmetal); background: transparent;">
-                                <img src="images/Techwear/SecondPhase/7P_Visualization.png" class="slide-img" style="opacity: 1; animation: none;">
-                            </div>
-                        `;
-                    }
-
-                    if (images.length > 0) {
-                        visualContent = `
-                            <div class="visual-placeholder data-mono" style="padding:0; border: 1px solid var(--neutral-gunmetal); background: transparent;">
-                                <div class="slideshow-container">
-                                    ${images.map((img, i) => `<img src="images/Techwear/SecondPhase/${img}" class="slide-img ${i === 0 ? 'active' : ''}">`).join('')}
-                                </div>
-                            </div>
-                        `;
-                    }
-                } else if (currentFase.includes("KETIGA")) {
-                    let images = [];
-                    if (slideTitle.includes('Slide 1')) {
-                        images = ['group-techwear-1.png', 'group-techwear-2.jpg', 'group-techwear-3.png'];
-                    }
-
-                    if (images.length > 0) {
-                        visualContent = `
-                            <div class="visual-placeholder data-mono" style="padding:0; border: 1px solid var(--neutral-gunmetal); background: transparent;">
-                                <div class="slideshow-container">
-                                    ${images.map((img, i) => `<img src="images/Techwear/ThirdPhase/${img}" class="slide-img ${i === 0 ? 'active' : ''}">`).join('')}
-                                </div>
-                            </div>
-                        `;
-                    }
-                }
-
-                spread.innerHTML = `
-                    <div class="spread-visual glass-panel">
-                        <div>
-                            <div class="fase-tag data-mono">${faseData.fase} // ${identifier}</div>
-                        </div>
-                        ${visualContent}
-                        <h2 class="spread-title">${title}</h2>
-                    </div>
-                    <div class="spread-content glass-panel">
-                        ${contentHtml}
-                    </div>
-                `;
-
-                container.appendChild(spread);
-                observer.observe(spread);
-                slideCounter++;
-            });
-        });
+    function highlightText(text) {
+        if (!text) return '';
         
-        // Initialize slideshows after content is added
+        let highlighted = text;
+
+        // 1. Structural labels (e.g., "1. Product:" or "Quality:")
+        // Restrict to alphanumeric/spaces and max 25 chars to avoid catching sentences
+        highlighted = highlighted.replace(/^(\d+\.\s+[\w\s]{1,25}:)|^([\w\s]{1,25}:)/gm, match => `<span class="highlight-label">${match}</span>`);
+
+        // 2. Content in parentheses (...) -> Yellow Tone
+        highlighted = highlighted.replace(/\(([^)]+)\)/g, match => `<span class="highlight-keyword">${match}</span>`);
+
+        // 3. Content in brackets [...] -> Red Tone
+        highlighted = highlighted.replace(/\[([^\]]+)\]/g, match => `<span class="highlight-strategy">${match}</span>`);
+
+        // 4. Strategy & Marketing terms (Highest Priority)
+        const strategyTerms = /\b(Fase \d|Segmentasi|Targeting|Positioning|Unique Selling Point|USP|7P|Marketing Mix|Marketing \d\.\d)\b/gi;
+        const keyTerms = /\b(TAM|SAM|SOM|O2O|Cheerleaders Effect|Blocking Content|Built-in Content|Product Placement|Product Usage)\b/gi;
+
+        highlighted = highlighted.replace(strategyTerms, match => `<span class="highlight-strategy">${match}</span>`);
+        highlighted = highlighted.replace(keyTerms, match => `<span class="highlight-keyword">${match}</span>`);
+
+        // 5. English Vocabulary (Fashion & Tech - Cyan Tone)
+        // We match words that haven't been wrapped in spans yet
+        const englishVocab = /\b(techwear|cyberpunk|niche market|e-commerce|worldwide shipping|gender-neutral|uniseks|waterproof|windproof|benefit sought|peer review|OOTD|athleisure|activewear|fast fashion|brand clothing|urban-dystopian|sci-fi|gaming|messenger carrier|Upper Armor|Lower Armor|manual screen printing|Direct Transfer Film|DTF|windbreaker|water-repellent|webbing|hero product|removable hoodie|swift mode system|cast off belt|brick-and-mortar|glitch-art|Native|Earned Media|hype|Urban Ninja)\b/gi;
+        
+        highlighted = highlighted.replace(englishVocab, match => `<span class="highlight-en">${match}</span>`);
+        
+        return highlighted;
+    }
+
+    function formatParagraphs(paragraphs) {
+        if (Array.isArray(paragraphs)) {
+            return paragraphs.map(p => `<div class="content-item"><p>${highlightText(cleanText(p))}</p></div>`).join('');
+        } else if (typeof paragraphs === 'string') {
+            return `<div class="content-item"><p>${highlightText(cleanText(paragraphs))}</p></div>`;
+        }
+        return '';
+    }
+
+    function createPhaseHeader(title, index) {
+        const phaseHeader = document.createElement('div');
+        phaseHeader.id = `phase-${index}`;
+        phaseHeader.style.padding = '8rem 4rem 4rem 4rem';
+        phaseHeader.style.borderBottom = '1px solid var(--neutral-gunmetal)';
+        phaseHeader.innerHTML = `
+            <div class="fase-tag data-mono" style="margin-bottom: 1rem;">ARCHIVE // 0${index}</div>
+            <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--text-primary); text-transform: uppercase;">${cleanText(title)}</h2>
+        `;
+        container.appendChild(phaseHeader);
+    }
+
+    function createSpread(faseName, title, contentHtml, visualHtml) {
+        const spread = document.createElement('div');
+        spread.className = 'spread';
+        spread.innerHTML = `
+            <div class="spread-visual glass-panel">
+                <div>
+                    <div class="fase-tag data-mono">${faseName}</div>
+                </div>
+                ${visualHtml}
+                <h2 class="spread-title">${cleanText(title)}</h2>
+            </div>
+            <div class="spread-content glass-panel">
+                ${contentHtml}
+            </div>
+        `;
+        container.appendChild(spread);
+        observer.observe(spread);
+    }
+
+    function getVisualHtml(phaseNum, index) {
+        if (phaseNum === 0) {
+            const images = ['group-techwear-1.png', 'group-techwear-2.jpg', 'group-techwear-3.png'];
+            return `
+                <div class="visual-placeholder data-mono" style="padding:0; border: 1px solid var(--neutral-gunmetal); background: transparent;">
+                    <div class="slideshow-container">
+                        ${images.map((img, i) => `
+                            <img src="images/Techwear/${img}" class="slide-img ${i === 0 ? 'active' : ''}">
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+        
+        let imgName = null;
+        if (phaseNum === 1) {
+            const fase1Images = ['techracer_web_6.jpg', 'techracer_web_7.jpg', 'techracer_web_8.jpg'];
+            imgName = fase1Images[index % fase1Images.length];
+        } else if (phaseNum === 2) {
+            const fase2Images = ['techracer_web_9.jpg', 'techracer_web_10.jpg', 'techracer_web_11.jpg'];
+            imgName = fase2Images[index % fase2Images.length];
+        }
+
+        if (imgName) {
+            return `
+                <div class="visual-placeholder data-mono" style="padding:0; border: 1px solid var(--neutral-gunmetal); background: transparent;">
+                    <img src="images/${imgName}" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(10%) contrast(1.1);">
+                </div>
+            `;
+        }
+
+        return `<div class="visual-placeholder data-mono">[ VISUAL ASSET PLACEHOLDER ]</div>`;
+    }
+
+    function buildPresentation(dokumen) {
+        // OVERVIEW
+        let overviewHtml = formatParagraphs(dokumen.pengantar.paragraf);
+        createSpread('OVERVIEW // PENGANTAR', dokumen.pengantar.sub_judul, overviewHtml, getVisualHtml(0, 0));
+
+        // FASE 1 (3 Spreads)
+        createPhaseHeader(dokumen.fase_1.sub_judul, 1);
+        
+        let f1_seg_tabel = dokumen.fase_1.analisis_segmentasi_pasar.tabel_1.data.map(d => `
+            <div class="content-item">
+                <h4>${cleanText(d.dimensi_segmentasi)}</h4>
+                <p>${highlightText(cleanText(d.deskripsi_dan_analisis))}</p>
+            </div>
+        `).join('');
+        createSpread('FASE 1 // SEGMENTASI', dokumen.fase_1.analisis_segmentasi_pasar.sub_judul, f1_seg_tabel, getVisualHtml(1, 0));
+
+        let f1_targeting = formatParagraphs(dokumen.fase_1.penargetan_pasar.paragraf);
+        createSpread('FASE 1 // TARGETING', dokumen.fase_1.penargetan_pasar.sub_judul, f1_targeting, getVisualHtml(1, 1));
+
+        let f1_positioning = formatParagraphs(dokumen.fase_1.pemosisian_merek.paragraf);
+        createSpread('FASE 1 // POSITIONING', dokumen.fase_1.pemosisian_merek.sub_judul, f1_positioning, getVisualHtml(1, 2));
+
+        // FASE 2 (2 Spreads)
+        createPhaseHeader(dokumen.fase_2.sub_judul, 2);
+        
+        let f2_usp_tabel = dokumen.fase_2.analisis_proposisi_penjualan_unik.tabel_2.data.map(d => `
+            <div class="content-item">
+                <h4>${cleanText(d.dimensi_usp)}</h4>
+                <p>${highlightText(cleanText(d.temuan_riset))}</p>
+            </div>
+        `).join('');
+        createSpread('FASE 2 // USP', dokumen.fase_2.analisis_proposisi_penjualan_unik.sub_judul, f2_usp_tabel, getVisualHtml(2, 0));
+
+        let f2_7p_poin = dokumen.fase_2.analisis_bauran_pemasaran.poin_7p.map(p => `
+            <div class="content-item">
+                <p>${highlightText(cleanText(p))}</p>
+            </div>
+        `).join('');
+        createSpread('FASE 2 // 7P MIX', dokumen.fase_2.analisis_bauran_pemasaran.sub_judul, f2_7p_poin, getVisualHtml(2, 2));
+
+        // FASE 3 (3 Spreads)
+        createPhaseHeader(dokumen.fase_3.sub_judul, 3);
+        createSpread('FASE 3 // PROMOSI UNIK', dokumen.fase_3.promosi_unik.sub_judul, formatParagraphs(dokumen.fase_3.promosi_unik.poin), getVisualHtml(3, 1));
+        createSpread('FASE 3 // JENIS MIX', dokumen.fase_3.jenis_mix.sub_judul, formatParagraphs(dokumen.fase_3.jenis_mix.poin), getVisualHtml(3, 2));
+        createSpread('FASE 3 // ALASAN MENARIK', dokumen.fase_3.alasan_menarik.sub_judul, formatParagraphs(dokumen.fase_3.alasan_menarik.poin), getVisualHtml(3, 0));
+
+        // FASE 4 (3 Spreads)
+        createPhaseHeader(dokumen.fase_4.sub_judul, 4);
+        dokumen.fase_4.taktik.forEach((taktik, idx) => {
+            let inner_html = formatParagraphs(taktik.teks);
+            createSpread(`FASE 4 // KOLABORASI 0${idx + 1}`, taktik.judul, inner_html, getVisualHtml(4, idx));
+        });
+
+        // KESIMPULAN
+        createPhaseHeader('KESIMPULAN', 5);
+        let kesimpulan = formatParagraphs(dokumen.kesimpulan_strategis.paragraf);
+        createSpread('OVERVIEW // KESIMPULAN', dokumen.kesimpulan_strategis.sub_judul, kesimpulan, getVisualHtml(1, 0));
+
+        // WORKS CITED - Dropdown
+        let worksCited = dokumen.works_cited;
+        let dropdownHtml = `
+            <div class="dropdown" style="margin-top: 4rem; width: 100%;">
+                <div class="dropdown-header glass-panel" onclick="this.nextElementSibling.classList.toggle('active')">
+                    <span>> VIEW ${cleanText(worksCited.sub_judul).toUpperCase()}</span>
+                    <span>▼</span>
+                </div>
+                <div class="dropdown-content glass-panel">
+                    <ul>
+                        ${worksCited.daftar.map(item => `<li>${cleanText(item)}</li>`).join('')}
+                    </ul>
+                </div>
+            </div>
+        `;
+        
+        const finalDiv = document.createElement('div');
+        finalDiv.style.padding = '0 0 4rem 0';
+        finalDiv.style.gridColumn = '1 / -1';
+        finalDiv.innerHTML = dropdownHtml;
+        container.appendChild(finalDiv);
+
         startSlideshows();
     }
 
@@ -218,7 +239,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 images[currentIndex].classList.remove('active');
                 currentIndex = (currentIndex + 1) % images.length;
                 images[currentIndex].classList.add('active');
-            }, 3000); // 3 seconds per image
+            }, 3000);
         });
     }
 });
