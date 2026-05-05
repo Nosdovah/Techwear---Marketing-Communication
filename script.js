@@ -153,19 +153,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         // FASE 4 VIDEO/IMAGE SUPPORT
         if (phaseNum === 4) {
-            if (index === 0) {
-                return `
-                    <div class="visual-placeholder data-mono" style="padding:1rem; border: 1px solid var(--neutral-gunmetal); background: #080808;">
-                        <img src="images/FourthPhase/Blocking Content.png" style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 0 15px rgba(255,255,255,0.1));">
-                    </div>
-                `;
-            } else if (index === 1) {
-                return `
-                    <div class="visual-placeholder data-mono" style="padding:1rem; border: 1px solid var(--neutral-gunmetal); background: #080808;">
-                        <img src="images/FourthPhase/Demonstrasi fungsional.png" style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 0 15px rgba(255,255,255,0.1));">
-                    </div>
-                `;
-            } else if (index === 2) {
+            if (index === 2) {
                 return `
                     <div class="visual-placeholder data-mono" style="padding:0; border: 1px solid var(--neutral-gunmetal); background: #000;">
                         <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: contain;">
