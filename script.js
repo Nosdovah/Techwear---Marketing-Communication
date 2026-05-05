@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             } else if (index === 2) {
                 return `
                     <div class="visual-placeholder data-mono" style="padding:0; border: 1px solid var(--neutral-gunmetal); background: #000;">
-                        <div class="mixed-media-container">
+                        <div class="mixed-media-container" style="width: 100%; height: 100%; position: relative;">
                             <video class="mixed-video" autoplay muted playsinline style="width: 100%; height: 100%; object-fit: contain;">
                                 <source src="images/FourthPhase/UGC.mp4" type="video/mp4">
                             </video>
@@ -285,34 +285,39 @@ document.addEventListener('DOMContentLoaded', async () => {
             const slider = container.querySelector('.mixed-slider');
             const slides = container.querySelectorAll('.mixed-slide');
             
-            video.onended = () => {
+            if (!video || !slider || slides.length === 0) return;
+
+            video.addEventListener('ended', () => {
                 video.style.display = 'none';
                 slider.style.display = 'block';
                 
+                // Ensure first slide is active
+                slides.forEach((s, i) => s.style.opacity = i === 0 ? '1' : '0');
+
                 let currentSlide = 0;
                 const totalSlides = slides.length;
                 
                 const runSlider = () => {
                     setTimeout(() => {
+                        // Fade out current
                         slides[currentSlide].style.opacity = '0';
                         currentSlide++;
                         
                         if (currentSlide < totalSlides) {
+                            // Fade in next
                             slides[currentSlide].style.opacity = '1';
                             runSlider();
                         } else {
-                            // End of slider, back to video
+                            // End of slider sequence, return to video
                             slider.style.display = 'none';
-                            // Reset slides for next loop
-                            slides.forEach((s, i) => s.style.opacity = i === 0 ? '1' : '0');
                             video.style.display = 'block';
-                            video.play();
+                            video.play().catch(e => console.log("Autoplay prevented:", e));
                         }
                     }, 3000); // 3 seconds per image
                 };
                 
                 runSlider();
-            };
+            });
         });
     }
 
