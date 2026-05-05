@@ -91,16 +91,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         container.appendChild(phaseHeader);
     }
 
-    function createSpread(faseName, title, contentHtml, visualHtml) {
+    function createSpread(faseName, title, contentHtml, visualHtml, extraClass = '') {
         const spread = document.createElement('div');
-        spread.className = 'spread';
+        spread.className = `spread ${extraClass}`;
         spread.innerHTML = `
             <div class="spread-visual glass-panel">
-                <div>
+                <div style="z-index: 5; position: relative;">
                     <div class="fase-tag data-mono">${faseName}</div>
                 </div>
                 ${visualHtml}
-                <h2 class="spread-title">${cleanText(title)}</h2>
+                <h2 class="spread-title" style="z-index: 5; position: relative;">${cleanText(title)}</h2>
             </div>
             <div class="spread-content glass-panel">
                 ${contentHtml}
@@ -122,6 +122,33 @@ document.addEventListener('DOMContentLoaded', async () => {
                     </div>
                 </div>
             `;
+        }
+
+        // FASE 3 IMAGE SUPPORT
+        if (phaseNum === 3) {
+            if (index === 1) {
+                return `
+                    <div class="visual-placeholder data-mono" style="padding:0; border: 1px solid var(--neutral-gunmetal); background: #000;">
+                        <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
+                            <source src="images/ThirdPhase/FASE 3  PROMOSI UNIK.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                `;
+            } else if (index === 0) {
+                return `
+                    <div class="visual-placeholder data-mono" style="padding:2rem; border: 1px solid var(--neutral-gunmetal); background: #050505;">
+                        <img src="images/ThirdPhase/Hashtag_techracer.png" style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 0 10px var(--accent-primary));">
+                    </div>
+                `;
+            } else if (index === 2) {
+                return `
+                    <div class="visual-placeholder data-mono" style="padding:0; border: 1px solid var(--neutral-gunmetal); background: #000;">
+                        <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9;">
+                            <source src="images/ThirdPhase/Techracer_instagram.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                `;
+            }
         }
         
         let imgName = null;
@@ -186,8 +213,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // FASE 3 (3 Spreads)
         createPhaseHeader(dokumen.fase_3.sub_judul, 3);
-        createSpread('FASE 3 // PROMOSI UNIK', dokumen.fase_3.promosi_unik.sub_judul, formatParagraphs(dokumen.fase_3.promosi_unik.poin), getVisualHtml(3, 1));
-        createSpread('FASE 3 // JENIS MIX', dokumen.fase_3.jenis_mix.sub_judul, formatParagraphs(dokumen.fase_3.jenis_mix.poin), getVisualHtml(3, 2));
+        createSpread('FASE 3 // PROMOSI UNIK', dokumen.fase_3.promosi_unik.sub_judul, formatParagraphs(dokumen.fase_3.promosi_unik.poin), getVisualHtml(3, 1), 'full-video-layout');
+        createSpread('FASE 3 // JENIS MIX', dokumen.fase_3.jenis_mix.sub_judul, formatParagraphs(dokumen.fase_3.jenis_mix.poin), getVisualHtml(3, 2), 'full-video-layout');
         createSpread('FASE 3 // ALASAN MENARIK', dokumen.fase_3.alasan_menarik.sub_judul, formatParagraphs(dokumen.fase_3.alasan_menarik.poin), getVisualHtml(3, 0));
 
         // FASE 4 (3 Spreads)
