@@ -153,12 +153,24 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         // FASE 4 VIDEO/IMAGE SUPPORT
         if (phaseNum === 4) {
-            if (index === 2) {
+            if (index === 1) {
+                return `
+                    <div class="visual-placeholder data-mono" style="padding:1rem; border: 1px solid var(--neutral-gunmetal); background: #080808;">
+                        <img src="images/FourthPhase/product knowledge review.png" style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 0 15px rgba(255,255,255,0.1));">
+                    </div>
+                `;
+            } else if (index === 2) {
                 return `
                     <div class="visual-placeholder data-mono" style="padding:0; border: 1px solid var(--neutral-gunmetal); background: #000;">
-                        <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: contain;">
-                            <source src="images/FourthPhase/UGC.mp4" type="video/mp4">
-                        </video>
+                        <div class="mixed-media-container">
+                            <video class="mixed-video" autoplay muted playsinline style="width: 100%; height: 100%; object-fit: contain;">
+                                <source src="images/FourthPhase/UGC.mp4" type="video/mp4">
+                            </video>
+                            <div class="mixed-slider" style="display:none; width: 100%; height: 100%; position: relative;">
+                                <img src="images/FourthPhase/UGC2.png" class="mixed-slide active" style="width: 100%; height: 100%; object-fit: contain; position: absolute; top:0; left:0;">
+                                <img src="images/FourthPhase/UGC3.png" class="mixed-slide" style="width: 100%; height: 100%; object-fit: contain; position: absolute; top:0; left:0; opacity:0;">
+                            </div>
+                        </div>
                     </div>
                 `;
             }
@@ -263,6 +275,45 @@ document.addEventListener('DOMContentLoaded', async () => {
         container.appendChild(finalDiv);
 
         startSlideshows();
+        initMixedMedia();
+    }
+
+    function initMixedMedia() {
+        const containers = document.querySelectorAll('.mixed-media-container');
+        containers.forEach(container => {
+            const video = container.querySelector('.mixed-video');
+            const slider = container.querySelector('.mixed-slider');
+            const slides = container.querySelectorAll('.mixed-slide');
+            
+            video.onended = () => {
+                video.style.display = 'none';
+                slider.style.display = 'block';
+                
+                let currentSlide = 0;
+                const totalSlides = slides.length;
+                
+                const runSlider = () => {
+                    setTimeout(() => {
+                        slides[currentSlide].style.opacity = '0';
+                        currentSlide++;
+                        
+                        if (currentSlide < totalSlides) {
+                            slides[currentSlide].style.opacity = '1';
+                            runSlider();
+                        } else {
+                            // End of slider, back to video
+                            slider.style.display = 'none';
+                            // Reset slides for next loop
+                            slides.forEach((s, i) => s.style.opacity = i === 0 ? '1' : '0');
+                            video.style.display = 'block';
+                            video.play();
+                        }
+                    }, 3000); // 3 seconds per image
+                };
+                
+                runSlider();
+            };
+        });
     }
 
     function startSlideshows() {
