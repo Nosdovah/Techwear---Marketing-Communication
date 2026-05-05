@@ -45,15 +45,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         let highlighted = text;
 
-        // 1. Structural labels (e.g., "1. Product:" or "Quality:")
-        // Restrict to alphanumeric/spaces and max 25 chars to avoid catching sentences
-        highlighted = highlighted.replace(/^(\d+\.\s+[\w\s]{1,25}:)|^([\w\s]{1,25}:)/gm, match => `<span class="highlight-label">${match}</span>`);
+        // 1. Structural labels (e.g., "1. Product:" or "UGC & Influencer OOTD:")
+        // We match from start of line up to a colon, provided it's within 45 chars and doesn't contain a period (to avoid catching full sentences)
+        highlighted = highlighted.replace(/^(\d+\.\s+[^:.]{1,45}:)|^([^:.]{1,45}:)/gm, match => `<span class="highlight-label">${match}</span>`);
 
-        // 2. Content in parentheses (...) -> Yellow Tone
-        highlighted = highlighted.replace(/\(([^)]+)\)/g, match => `<span class="highlight-keyword">${match}</span>`);
+        // 2. Content in parentheses (...) -> Yellow Tone (Delimiters stay white)
+        highlighted = highlighted.replace(/\(([^)]+)\)/g, (match, content) => `(<span class="highlight-keyword">${content}</span>)`);
 
-        // 3. Content in brackets [...] -> Red Tone
-        highlighted = highlighted.replace(/\[([^\]]+)\]/g, match => `<span class="highlight-strategy">${match}</span>`);
+        // 3. Content in brackets [...] -> Red Tone (Delimiters stay white)
+        highlighted = highlighted.replace(/\[([^\]]+)\]/g, (match, content) => `[<span class="highlight-strategy">${content}</span>]`);
 
         // 4. Strategy & Marketing terms (Highest Priority)
         const strategyTerms = /\b(Fase \d|Segmentasi|Targeting|Positioning|Unique Selling Point|USP|7P|Marketing Mix|Marketing \d\.\d)\b/gi;
@@ -63,8 +63,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         highlighted = highlighted.replace(keyTerms, match => `<span class="highlight-keyword">${match}</span>`);
 
         // 5. English Vocabulary (Fashion & Tech - Cyan Tone)
-        // We match words that haven't been wrapped in spans yet
-        const englishVocab = /\b(techwear|cyberpunk|niche market|e-commerce|worldwide shipping|gender-neutral|uniseks|waterproof|windproof|benefit sought|peer review|OOTD|athleisure|activewear|fast fashion|brand clothing|urban-dystopian|sci-fi|gaming|messenger carrier|Upper Armor|Lower Armor|manual screen printing|Direct Transfer Film|DTF|windbreaker|water-repellent|webbing|hero product|removable hoodie|swift mode system|cast off belt|brick-and-mortar|glitch-art|Native|Earned Media|hype|Urban Ninja)\b/gi;
+        const englishVocab = /\b(techwear|cyberpunk|niche market|e-commerce|worldwide shipping|gender-neutral|uniseks|waterproof|windproof|benefit sought|peer review|OOTD|athleisure|activewear|fast fashion|brand clothing|urban-dystopian|sci-fi|gaming|messenger carrier|Upper Armor|Lower Armor|manual screen printing|Direct Transfer Film|DTF|windbreaker|water-repellent|webbing|hero product|removable hoodie|swift mode system|cast off belt|brick-and-mortar|glitch-art|Native|Earned Media|hype|Urban Ninja|Product Drop|Software|Hardware|System Update)\b/gi;
         
         highlighted = highlighted.replace(englishVocab, match => `<span class="highlight-en">${match}</span>`);
         
@@ -198,10 +197,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             createSpread(`FASE 4 // KOLABORASI 0${idx + 1}`, taktik.judul, inner_html, getVisualHtml(4, idx));
         });
 
-        // KESIMPULAN
-        createPhaseHeader('KESIMPULAN', 5);
-        let kesimpulan = formatParagraphs(dokumen.kesimpulan_strategis.paragraf);
-        createSpread('OVERVIEW // KESIMPULAN', dokumen.kesimpulan_strategis.sub_judul, kesimpulan, getVisualHtml(1, 0));
+
 
         // WORKS CITED - Dropdown
         let worksCited = dokumen.works_cited;
