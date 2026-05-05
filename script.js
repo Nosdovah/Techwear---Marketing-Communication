@@ -45,9 +45,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         let highlighted = text;
 
-        // 1. Structural labels (e.g., "1. Product:" or "UGC & Influencer OOTD:")
-        // We match from start of line up to a colon, provided it's within 45 chars and doesn't contain a period (to avoid catching full sentences)
-        highlighted = highlighted.replace(/^(\d+\.\s+[^:.]{1,45}:)|^([^:.]{1,45}:)/gm, match => `<span class="highlight-label">${match}</span>`);
+        // 1. Structural labels (e.g., "1. Product:" or "• Bukti:")
+        // We capture any leading bullets/numbers as a prefix so they don't get highlighted
+        highlighted = highlighted.replace(/^([•\d\.\s]*)([^:.]{1,45}:)/gm, (match, prefix, label) => `${prefix}<span class="highlight-label">${label}</span>`);
 
         // 2. Content in parentheses (...) -> Yellow Tone (Delimiters stay white)
         highlighted = highlighted.replace(/\(([^)]+)\)/g, (match, content) => `(<span class="highlight-keyword">${content}</span>)`);
@@ -57,13 +57,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // 4. Strategy & Marketing terms (Highest Priority)
         const strategyTerms = /\b(Fase \d|Segmentasi|Targeting|Positioning|Unique Selling Point|USP|7P|Marketing Mix|Marketing \d\.\d)\b/gi;
-        const keyTerms = /\b(TAM|SAM|SOM|O2O|Cheerleaders Effect|Blocking Content|Built-in Content|Product Placement|Product Usage)\b/gi;
+        const keyTerms = /\b(TAM|SAM|SOM|O2O|Cheerleaders Effect|Blocking Content|Built-in Content|Product Placement|Product Usage|Product Knowledge)\b/gi;
 
         highlighted = highlighted.replace(strategyTerms, match => `<span class="highlight-strategy">${match}</span>`);
         highlighted = highlighted.replace(keyTerms, match => `<span class="highlight-keyword">${match}</span>`);
 
         // 5. English Vocabulary (Fashion & Tech - Cyan Tone)
-        const englishVocab = /\b(techwear|cyberpunk|niche market|e-commerce|worldwide shipping|gender-neutral|uniseks|waterproof|windproof|benefit sought|peer review|OOTD|athleisure|activewear|fast fashion|brand clothing|urban-dystopian|sci-fi|gaming|messenger carrier|Upper Armor|Lower Armor|manual screen printing|Direct Transfer Film|DTF|windbreaker|water-repellent|webbing|hero product|removable hoodie|swift mode system|cast off belt|brick-and-mortar|glitch-art|Native|Earned Media|hype|Urban Ninja|Product Drop|Software|Hardware|System Update)\b/gi;
+        const englishVocab = /\b(techwear|cyberpunk|niche market|e-commerce|worldwide shipping|gender-neutral|uniseks|waterproof|windproof|water-resistant|premium|benefit sought|peer review|OOTD|athleisure|activewear|fast fashion|brand clothing|urban-dystopian|sci-fi|gaming|messenger carrier|Upper Armor|Lower Armor|manual screen printing|Direct Transfer Film|DTF|windbreaker|water-repellent|webbing|hero product|removable hoodie|swift mode system|swift mode|cast off belt|brick-and-mortar|glitch-art|Native|Earned Media|hype|Urban Ninja|Product Drop|Software|Hardware|System Update|NIGHTSHADE)\b/gi;
         
         highlighted = highlighted.replace(englishVocab, match => `<span class="highlight-en">${match}</span>`);
         
@@ -157,6 +157,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                 return `
                     <div class="visual-placeholder data-mono" style="padding:1rem; border: 1px solid var(--neutral-gunmetal); background: #080808;">
                         <img src="images/FourthPhase/Blocking Content.png" style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 0 15px rgba(255,255,255,0.1));">
+                    </div>
+                `;
+            } else if (index === 1) {
+                return `
+                    <div class="visual-placeholder data-mono" style="padding:1rem; border: 1px solid var(--neutral-gunmetal); background: #080808;">
+                        <img src="images/FourthPhase/Demonstrasi fungsional.png" style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 0 15px rgba(255,255,255,0.1));">
                     </div>
                 `;
             } else if (index === 2) {
