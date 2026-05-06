@@ -879,3 +879,116 @@ a {
         min-height: 280px;
     }
 }
+
+/* -------------------------------------
+   PRINT / PDF EXPORT (PRESENTATION MODE)
+-------------------------------------- */
+@media print {
+    @page {
+        size: 16in 9in; /* 16:9 Aspect Ratio */
+        margin: 0;
+    }
+
+    html, body {
+        background-color: #000 !important;
+        color: #fff !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        overflow: visible !important;
+    }
+
+    /* Hide non-presentation UI */
+    nav, .navbar, .navbar *, .ticker-tape, .scroll-indicator, .footer, .dropdown {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Force background textures */
+    .tech-bg {
+        position: fixed;
+        display: block !important;
+        z-index: -10;
+    }
+
+    /* Slide Elements */
+    .hero-section, .fase-header, .spread {
+        page-break-after: always !important;
+        break-after: page !important;
+        height: 100vh !important;
+        min-height: 100vh !important;
+        margin: 0 !important;
+        border: none !important;
+        padding: 4rem 5% !important;
+        box-sizing: border-box;
+        overflow: hidden !important;
+    }
+
+    /* Hero Slide */
+    .hero-section {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* Title Slides */
+    .fase-header {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    /* Grid Slides */
+    .spread {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 2rem !important;
+        align-items: stretch !important;
+        background: transparent !important;
+    }
+
+    /* Video/Full Width Slides */
+    .spread.full-video-layout {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .spread.full-video-layout .spread-visual {
+        height: 60vh !important;
+    }
+
+    .spread.full-video-layout .spread-content {
+        height: 40vh !important;
+        padding: 2rem !important;
+    }
+
+    .glass-panel {
+        background: rgba(18, 20, 23, 0.9) !important;
+        backdrop-filter: none !important; /* Filters often break in PDF */
+        border: 1px solid rgba(255, 0, 23, 0.8) !important;
+    }
+
+    /* Content adjustments for 16:9 fit */
+    .content-item p {
+        font-size: 1.1rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .spread-title {
+        font-size: 2rem !important;
+    }
+
+    .fase-tag {
+        font-size: 0.9rem !important;
+    }
+
+    /* Prevent breaking inside content */
+    img, video, .content-item, .spread-visual, .spread-content {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+}
