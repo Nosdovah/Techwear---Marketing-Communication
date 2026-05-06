@@ -4,10 +4,10 @@
         "pengantar": {
             "sub_judul": "Pengantar: Transformasi Industri Fashion dan Paradigma Evolusi Pemasaran",
             "paragraf": [
-                "• Industri fesyen global dan lokal saat ini tengah berada di episentrum transformasi yang didorong oleh pergeseran nilai konsumen, kemajuan teknologi digital, dan peningkatan kesadaran akan identitas personal serta keberlanjutan.",
-                "• Merek pakaian tidak lagi sekadar entitas komersial penutup tubuh; merek telah bermetamorfosis menjadi agregator nilai, gaya hidup, dan representasi citra diri yang ingin diproyeksikan konsumen.",
-                "• Techracer menempati sebuah ceruk pasar (niche market) yang sangat spesifik dan radikal, yaitu pakaian bergenre techwear dan cyberpunk sebuah hibrida antara busana fungsional tingkat tinggi dengan estetika jalanan (streetwear) bergaya distopia masa depan.",
-                "• Presentasi ini mengurai anatomi bisnis Techracer melalui empat fase kritis: Marketing 2.0 (Customer-Oriented), Marketing 3.0 (Human Centric), Marketing 4.0 (Moving to Digital), dan Taktik Kolaborasi Ekosistem Digital."
+                "• Industri fesyen global dan lokal kini bertransformasi didorong oleh pergeseran nilai konsumen, digitalisasi, dan kesadaran identitas diri.",
+                "• Merek pakaian bukan lagi sekadar penutup tubuh, melainkan representasi gaya hidup dan citra diri konsumen.",
+                "• Techracer menempati ceruk pasar (niche market) techwear dan cyberpunk: busana fungsional tinggi berestetika jalanan (streetwear) distopia masa depan.",
+                "• Presentasi ini mengurai bisnis Techracer dalam empat fase: Marketing 2.0 (Customer-Oriented), 3.0 (Human Centric), 4.0 (Moving to Digital), dan Kolaborasi Ekosistem Digital."
             ]
         },
         "fase_1": {
@@ -18,19 +18,19 @@
                     "data": [
                         {
                             "dimensi_segmentasi": "Karakteristik Geografis",
-                            "deskripsi_dan_analisis": "• Meskipun operasional berlokasi di Tangerang, batasan geografis pasar Techracer terhapus oleh e-commerce. Merek ini melayani pengiriman Worldwide (global), memecah segmentasi menjadi konsentrasi pasar domestik dan internasional (Asia, Jepang, Amerika Utara, hingga Eropa)."
+                            "deskripsi_dan_analisis": "• Beroperasi di Tangerang, namun batasan geografis terhapus e-commerce. Melayani pengiriman Worldwide (global), mencakup pasar domestik dan internasional (Asia, Amerika Utara, Eropa)."
                         },
                         {
                             "dimensi_segmentasi": "Demografis",
-                            "deskripsi_dan_analisis": "• Membidik kohort Milenial dan Gen Z (15-35 tahun) dengan desain uniseks (gender-neutral). Target audiens berada pada segmen menengah hingga menengah-atas, dijustifikasi oleh titik harga produk utama berkisar antara $70.00 hingga $145.00 (Rp 495.000 hingga Rp 1.800.000)."
+                            "deskripsi_dan_analisis": "• Membidik Milenial dan Gen Z (15-35 tahun) dengan desain uniseks (gender-neutral). Target segmen menengah hingga atas, dengan harga $70-$145 (Rp 495rb - 1,8jt)."
                         },
                         {
                             "dimensi_segmentasi": "Psikografis",
-                            "deskripsi_dan_analisis": "• Dimensi psikografis adalah tulang punggung Techracer. Menargetkan individu dengan afinitas kultural mendalam terhadap subkultur cyberpunk, fiksi ilmiah, video game futuristik, dan estetika \"urban-dystopian\". Mereka membeli produk sebagai sarana eskapisme dan representasi identitas pemberontakan teknologi."
+                            "deskripsi_dan_analisis": "• Menargetkan individu berafinitas kuat pada subkultur cyberpunk, fiksi ilmiah, gaming futuristik, dan estetika \"urban-dystopian\". Produk dibeli sebagai eskapisme dan identitas pemberontakan teknologi."
                         },
                         {
                             "dimensi_segmentasi": "Perilaku (Behavioral)",
-                            "deskripsi_dan_analisis": "• Konsumen adalah adopter teknologi tinggi (tech-savvy) yang aktif di komunitas digital. Mereka mencari fungsionalitas ekstrem: pakaian tahan cuaca (waterproof/windproof), mobilitas tinggi, dan sistem penyimpanan ganda. Pola pembelian dipengaruhi efek ulasan sejawat dan visualisasi padu padan (OOTD) pemengaruh."
+                            "deskripsi_dan_analisis": "• Konsumen tech-savvy yang mencari fungsionalitas ekstrem (waterproof/windproof, mobilitas tinggi). Pembelian sangat dipengaruhi ulasan sejawat (peer review) dan visualisasi OOTD pemengaruh."
                         }
                     ]
                 }
@@ -38,17 +38,17 @@
             "penargetan_pasar": {
                 "sub_judul": "Penargetan Pasar (Targeting): Analisis TAM, SAM, dan SOM",
                 "paragraf": [
-                    "• Total Addressable Market (TAM): Bermuara pada industri pakaian olahraga dan busana fungsional global. Di Indonesia saja, valuasinya mencapai USD 2.557,83 Juta pada 2024 dan tumbuh pesat. Secara global, TAM menyentuh angka ratusan miliar dolar.",
-                    "• Serviceable Available Market (SAM): Sub-sektor pakaian techwear dan streetwear taktis di pasar domestik maupun internasional. Konsumen secara eksplisit mencari integrasi bahan penolak air, sirkulasi udara, kapasitas penyimpanan masif, dan potensi gaya berlapis.",
-                    "• Serviceable Obtainable Market (SOM): Mencakup komunitas kolektor cyberpunk di Reddit (r/TechWear, r/kurowear), peminat fesyen motor gede yang mencari jaket windproof alternatif, serta pelanggan di agregator global seperti Etsy yang mencari estetika futuristik independen."
+                    "• Total Addressable Market (TAM): Industri pakaian olahraga dan fungsional global. Valuasi di Indonesia USD 2.557,83 Juta (2024), dan mencapai ratusan miliar dolar secara global.",
+                    "• Serviceable Available Market (SAM): Sub-sektor techwear dan streetwear taktis, untuk konsumen yang mencari bahan water-repellent, sirkulasi udara, dan gaya berlapis.",
+                    "• Serviceable Obtainable Market (SOM): Komunitas cyberpunk di Reddit (r/TechWear), peminat fesyen otomotif untuk jaket windproof, dan pembeli estetika futuristik di Etsy."
                 ]
             },
             "pemosisian_merek": {
                 "sub_judul": "Pemosisian Merek (Brand Positioning)",
                 "paragraf": [
-                    "• Techracer dengan brilian menolak diklasifikasikan sebagai pembuat \"baju\" konvensional. Mereka memperkenalkan produknya sebagai \"Futuristic Fashion Objects\" dan secara konsisten menyebut setiap potong pakaian sebagai \"Armor\" (Baju Zirah) atau \"Gears\" (Perlengkapan).",
-                    "• Diferensiasi diperkuat melalui sistem penamaan produk yang menyerupai kode klasifikasi militer atau nomenklatur sistem operasi (cth: HYPER/ ZERO.WHT, TRC99/ LP01.BLCK, CHASERS/ RED).",
-                    "• Pemosisian ini menciptakan batas eksklusivitas—sebuah bentuk validasi subkultur yang luar biasa kuat bagi penggemar sci-fi, menjustifikasi harga premium, dan menciptakan basis penganut kultus (cult following) yang loyal."
+                    "• Techracer memosisikan diri sebagai pembuat \"Futuristic Fashion Objects\", menyebut produk mereka \"Armor\" atau \"Gears\" bukan sekadar baju.",
+                    "• Diferensiasi kuat melalui penamaan bergaya kode militer atau sistem komputasi (cth: HYPER/ ZERO.WHT, TRC99/ LP01.BLCK).",
+                    "• Eksklusivitas ini memvalidasi subkultur sci-fi, menjustifikasi harga premium, dan membangun basis pelanggan fanatik (cult following)."
                 ]
             }
         },
@@ -60,19 +60,19 @@
                     "data": [
                         {
                             "dimensi_usp": "Quality (Kualitas / Q)",
-                            "temuan_riset": "• Produk dikonstruksi dari material teknis poliester Taslan Milky dan kain Cordura (windproof & water-resistant), mengintegrasikan perangkat keras berspesifikasi tinggi seperti YKK Zipper dan Waterproof Webbing. Sebagai respons atas kritik pelanggan terkait sablon DTF yang rentan, Techracer melakukan peningkatan dengan mengonversi metode cetak menjadi Manual Screen Printing mulai Maret 2026 untuk menjamin durabilitas estetika."
+                            "temuan_riset": "• Material teknis Taslan Milky & Cordura (windproof & water-resistant) dengan YKK Zipper. Memperbaiki sablon DTF menjadi Manual Screen Printing demi durabilitas estetika."
                         },
                         {
                             "dimensi_usp": "Service Excellence (Layanan Unggul / Se)",
-                            "temuan_riset": "• Layanan pelanggan via surel dan WhatsApp. Kebijakan pengembalian ketat, menolak penukaran jika produk telah dicuci/digunakan. Terdapat krisis manajemen komplain dari pembeli internasional yang tidak menerima konfirmasi pembaruan pengiriman. Namun, sebagian konsumen merasa puas dengan respon surel. Dimensi ini masih menjadi titik kelemahan yang harus distabilkan."
+                            "temuan_riset": "• CS via surel & WA dengan kebijakan retur ketat. Sempat ada isu komplain internasional terkait update pengiriman, meski respon surel cukup memuaskan. Masih menjadi area pengembangan."
                         },
                         {
                             "dimensi_usp": "Price (Harga / P)",
-                            "temuan_riset": "• Beroperasi di koridor premium terjangkau (affordable premium). Harga internasional antara $110.00 hingga $145.00, domestik Rp 495.000 hingga Rp 1.800.000. Menggunakan Value-Based Pricing, di mana konsumen membayar untuk desain futuristik dan eksklusivitas. Sangat kompetitif dibandingkan pelopor techwear raksasa seperti Acronym."
+                            "temuan_riset": "• Harga affordable premium ($110-$145 / Rp 495rb-1,8jt). Menggunakan Value-Based Pricing atas eksklusivitas desain, sangat kompetitif dibanding pesaing seperti Acronym."
                         },
                         {
                             "dimensi_usp": "Speed (Kecepatan / S)",
-                            "temuan_riset": "• Paket diproses 3-7 hari kerja. Pengiriman domestik lancar. Pengiriman lintas benua bervariasi: Amerika relatif cepat, namun Eropa bisa 2-3 minggu. Notifikasi pajak cukai via WhatsApp lokal sering terlewatkan pelanggan internasional. Techracer merestrukturisasi layanan dengan beralih sepenuhnya ke DHL untuk menjamin akurasi dan kecepatan lacak."
+                            "temuan_riset": "• Proses 3-7 hari. Pengiriman domestik lancar, internasional bervariasi. Techracer kini beralih sepenuhnya ke DHL untuk akurasi pelacakan dan kecepatan global."
                         }
                     ]
                 }
@@ -80,13 +80,13 @@
             "analisis_bauran_pemasaran": {
                 "sub_judul": "Analisis Bauran Pemasaran (Marketing Mix 7P)",
                 "poin_7p": [
-                    "1. Product: Manifestasi fisik perlengkapan pertahanan sci-fi. Meliputi UPPER.ARMOR (Jaket NIGHTSHADE, STRIKER), LOWER.ARMOR (Celana kargo TRC99/ LP01 dengan 7 saku), Carrier, Basic Apparel, dan aksesori. Fitur mencakup removable hoodie, swift mode system ritsleting, dan jaring plastik.",
-                    "2. Price: Tas utilitas mulai $70.00, heavy-class jackets hingga $145.00. Menggunakan taktik promosi berkala seperti Payday Sale (potongan hingga 50%) dan \"Beli 5 Gratis 1\" untuk merangsang perilaku pembelian impulsif.",
-                    "3. Place: Model Bisnis Langsung ke Konsumen (D2C) murni berbasis e-commerce. Portal internasional (techracer.id), domestik (techracer.shop), serta agregator Tokopedia, Shopee, dan Etsy untuk merengkuh segmen spesifik.",
-                    "4. Promotion: Penceritaan visual asimetris. Penguasaan algoritma Instagram melalui konten buatan pengguna (UGC), desain glitch-art, dan penggelaran acara \"New Drop\" eksklusif yang menciptakan efek kelangkaan dan urgensi.",
-                    "5. People: Melibatkan ekosistem manusia yang membentuk otoritas kultural merek: administrator CS, fotografer komunitas, pemengaruh gaya jalanan, model fesyen nir-gender, dan penggemar setia.",
-                    "6. Process: Alur transaksi disistematisasi layaknya instalasi piranti lunak. Namun, pelanggan internasional diwajibkan menyediakan Nomor Induk Pajak (Tax ID) saat checkout untuk kliring pabean, dan PO BOX dilarang.",
-                    "7. Physical Evidence: UI situs web menyajikan pengalaman imersif (animasi sci-fi, instruksi \".EXECUTE\"). Bukti fisik nyata hadir lewat kekakuan webbing nilon, label logo silikon, ritsleting YKK, dan presisi jahitan."
+                    "1. Product: Perlengkapan sci-fi (UPPER.ARMOR, LOWER.ARMOR, Carrier). Fitur: removable hoodie, swift mode system.",
+                    "2. Price: Dari tas $70 hingga jaket $145. Taktik: Payday Sale & bundel untuk pembelian impulsif.",
+                    "3. Place: D2C murni via e-commerce (techracer.id, Tokopedia, Shopee, Etsy).",
+                    "4. Promotion: Visual asimetris di Instagram dengan UGC, glitch-art, dan acara \"New Drop\" demi efek kelangkaan.",
+                    "5. People: Melibatkan CS, fotografer komunitas, influencer jalanan, model uniseks, dan loyalitas penggemar.",
+                    "6. Process: Transaksi disistematisasi bergaya instalasi software. Wajib Tax ID untuk pembeli internasional.",
+                    "7. Physical Evidence: UI web imersif (animasi sci-fi) dan kualitas fisik nyata (nilon webbing, logo silikon, ritsleting YKK)."
                 ]
             }
         },
@@ -95,25 +95,25 @@
             "promosi_unik": {
                 "sub_judul": "Promosi Unik: Estetika Pembaruan Sistem",
                 "poin": [
-                    "• Strategi paling unik Techracer adalah mengubah pengumuman koleksi (Product Drop) menjadi simulasi peluncuran pembaruan piranti lunak dan instalasi perangkat keras (Software/Hardware System Update).",
-                    "• Mereka membuang terminologi ritel tradisional. Alih-alih tombol \"Beli Sekarang\", mereka menggunakan komando siber seperti \".EXECUTE\", \".INPUT\", dan \"INSTALL ARMOR\".",
-                    "• Produk dirilis dipresentasikan sebagai gamifikasi sistem pertahanan masa depan dengan nama sandi militer seperti .TYP/A.R.S/BLK. dll"
+                    "• Pengumuman koleksi (Product Drop) diubah menjadi simulasi pembaruan software/hardware.",
+                    "• Mengganti terminologi ritel (Beli Sekarang) dengan komando siber (\".EXECUTE\", \"INSTALL ARMOR\").",
+                    "• Rilis produk disajikan bagai gamifikasi dengan nama sandi ala militer (.TYP/A.R.S/BLK)."
                 ]
             },
             "jenis_mix": {
                 "sub_judul": "Klasifikasi Bauran Promosi (Promotion Mix)",
                 "poin": [
-                    "• Tergolong perpaduan Digital Marketing terspesialisasi dan turunan Direct Marketing, dibumbui Guerilla Marketing secara visual.",
-                    "• Seluruh siklus eksekusi dilangsungkan dalam ekosistem siber (Web & Instagram).",
-                    "• Pemanfaatan rekayasa visual glitch-art, warna kontras, dan manipulasi tata bahasa komputasi (penyisipan //) dirancang untuk beresonansi dengan algoritma kelompok geek, gamer, dan penganut kebudayaan siber."
+                    "• Paduan Digital Marketing dan Direct Marketing, dengan sentuhan Guerilla Marketing visual.",
+                    "• Eksekusi penuh di ekosistem digital (Web & Instagram).",
+                    "• Rekayasa visual glitch-art dan tata bahasa komputasi (//) dirancang menarik komunitas geek & gamer."
                 ]
             },
             "alasan_menarik": {
                 "sub_judul": "Mengapa Strategi Ini Menarik dan Efektif",
                 "poin": [
-                    "• Strategi \"sistem pembaruan\" ini berhasil menembus kebisingan iklan ritel konvensional. Bagi target market, bahasa sandi ini adalah validasi identitas dan memenuhi fantasi psikografis.",
-                    "• Pendekatan gamifikasi transaksi mengunci loyalitas secara organik. Konsumen merasa sedang berpartisipasi dalam permainan peran (role-playing) pasca-apokaliptik.",
-                    "• Kepuasan emosional memicu \"cheerleaders effect\", di mana pelanggan dengan sukarela membagikan bukti pembelian produk ke media sosial, bertransformasi menjadi materi promosi gratis (earned media)."
+                    "• Strategi ini menembus kebisingan ritel, memvalidasi identitas, dan memenuhi fantasi target market.",
+                    "• Gamifikasi transaksi menciptakan loyalitas organik layaknya role-playing pasca-apokaliptik.",
+                    "• Memicu \"cheerleaders effect\" di mana pelanggan bangga membagikan OOTD sebagai promosi gratis (earned media)."
                 ]
             }
         },
@@ -129,14 +129,14 @@
                 {
                     "judul": "B. Konten Terintegrasi dan Edukasi (Built-in Content / Product Knowledge)",
                     "teks": [
-                        "• Promosi edukatif di mana penjelasan komprehensif anatomi produk disisipkan langsung ke materi konten utama untuk mendongkrak product knowledge dan merasionalkan harga premium.",
-                        "• Bukti: Pada unggahan Youtuber PaperClawXX ,Techracer secara eksplisit menyebutkan bahwa pada awalnya, merek ini berfokus pada tema racing khas Sunmori (Sunday Morning Ride), namun kini mereka telah sukses bertransformasi total ke arah futuristic techwear. Keunggulan visual Techracer juga terlihat pada Keunggulan Visual: Kekuatan utama mereka terletak pada potongan (cutting) yang unik serta keseimbangan desain yang sangat apik."
+                        "• Penjelasan komprehensif produk disisipkan langsung untuk mendongkrak product knowledge.",
+                        "• Bukti: Di unggahan Youtuber PaperClawXX, Techracer menjelaskan evolusi ke futuristic techwear, menonjolkan potongan (cutting) unik dan keseimbangan desain."
                     ]
                 },
                 {
                     "judul": "C. Penempatan dan Penggunaan Produk (Product Placement & Usage)",
                     "teks": [
-                        "• UGC & Influencer OOTD: Techracer memanen kredibilitas jalanan dengan me-repost foto kreator digital/pelanggan yang berpose OOTD bergaya cyberpunk di lanskap urban, membuktikan produk mampu mendorong kreativitas pemakai."
+                        "• UGC & Influencer OOTD: Merekrut kredibilitas jalanan dengan me-repost foto pelanggan ber-OOTD cyberpunk di lanskap urban."
                     ]
                 }
             ]
